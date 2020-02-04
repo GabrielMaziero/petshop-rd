@@ -24,7 +24,7 @@
             vacinado: false,
         }
 
-        var pets = [{
+        let pets = [{
             nome: "Menino",
             idade: 8,
             raca: "Vira-lata",
@@ -37,7 +37,7 @@
             },
             vacinado: false,
         }]
-        const vacinar = (cachorro) => {
+        const vacinar = cachorro => {
             if (cachorro.vacinado) {
                 console.log("Ja esta vacinado")
             } else {
@@ -48,7 +48,7 @@
 
         const adicionarPet = (nome, idade, raca, tipo, peso, cor, vacinado, servicos) => {
 
-            let petNovo = {
+            const PETENOVO = {
                 nome: nome,
                 idade: idade,
                 raca: raca,
@@ -64,7 +64,7 @@
 
             };
 
-            pets.push(petNovo);
+            pets.push(PETENOVO);
 
             console.log("Pet adicionar com sucesso");
 
@@ -72,7 +72,7 @@
 
         // function mostrarPets(){
         const mostrarPets = () => {
-            pets.forEach(function (pet, index) {
+            pets.forEach((pet, index) => {
                 // for(let i = 0; i < pets.length; i++){
                 console.log("---------------------------------");
                 console.log("Nome do pet:" + pet.nome);
