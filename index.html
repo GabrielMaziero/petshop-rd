@@ -8,7 +8,9 @@
 
 <body>
     <script>
-        console.log("*********** PETSHOP DA RD ***********")
+        const EMPRESA = "*********** PETSHOP DA RD ***********" //
+        console.log(EMPRESA)
+
         var cachorro = {
             nome: "Menino",
             idade: 8,
@@ -20,8 +22,21 @@
                 idade: null,
             },
             vacinado: false,
-            servicos: ["tosa", "banho", "veterinario"]
         }
+
+        var pets = [{
+            nome: "Menino",
+            idade: 8,
+            raca: "Vira-lata",
+            tipo: "Cachorro",
+            peso: 5.5,
+            cor: "caramelo",
+            dono: {
+                nome: "Gabriel",
+                idade: null,
+            },
+            vacinado: false,
+        }]
         function vacinar(cachorro) {
             if (cachorro.vacinado) {
                 console.log("Ja esta vacinado")
@@ -29,6 +44,43 @@
                 cachorro.vacinado = true
                 console.log("Vacina aplicada com sucesso")
             }
+        }
+
+        function adicionarPet(nome, idade, raca, tipo, peso, cor, vacinado, servicos) {
+
+            let petNovo = {
+                nome: nome,
+                idade: idade,
+                raca: raca,
+                tipo: tipo,
+                peso: peso,
+                cor: cor,
+                dono: {
+                    nome: null,
+                    idade: null
+                },
+                vacinado: vacinado,
+                servicos: servicos
+
+            };
+
+            pets.push(petNovo);
+
+            console.log("Pet adicionar com sucesso");
+            
+        }
+
+        // function mostrarPets(){
+        const mostrarPets = function(){
+            pets.forEach(function(pet,index){
+            // for(let i = 0; i < pets.length; i++){
+                console.log("---------------------------------");
+                console.log("Nome do pet:" + pet.nome);
+                console.log("Tipo do pet:" + pet.tipo);
+                console.log(pet.vacinado?"Esse pet já e vacinado":"Esse pet não foi vacinado!");
+            
+        });
+
         }
     </script>
 </body>
