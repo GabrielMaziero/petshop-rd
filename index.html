@@ -118,6 +118,14 @@
 
             return listaPetsGatos
         }
+
+        const vacinarGeral = () => {
+            let retorno = pets.map(function (pet, index) {
+                pet.vacinado = true;
+                return pet
+            });
+            return retorno;
+        }
     </script>
 </body>
 
