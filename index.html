@@ -36,6 +36,19 @@
                 idade: null,
             },
             vacinado: false,
+        },
+        {
+            nome: "fumaça",
+            idade: 3,
+            raca: "persa",
+            tipo: "Gato",
+            peso: 3.5,
+            cor: "preto",
+            dono: {
+                nome: "Rafael",
+                idade: null,
+            },
+            vacinado: true,
         }]
         const vacinar = cachorro => {
             if (cachorro.vacinado) {
@@ -83,6 +96,27 @@
 
             });
 
+        }
+
+        // const filtraPetsGatos = () => {
+        //     let petsTipoGato = [];
+
+        //     pets.forEach((pet, index) => {
+        //         if (pet.tipo == "Gato") {
+        //             petsTipoGato.push(pet)
+        //         }
+        //     });
+
+        //     return petsTipoGato;
+
+        // }
+
+        const filtraPetsGatos = () => {
+            let listaPetsGatos = pets.filter((pet, index) => {
+                return pet.tipo == "Gato"
+            })
+
+            return listaPetsGatos
         }
     </script>
 </body>
