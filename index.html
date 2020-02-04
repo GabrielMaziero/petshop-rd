@@ -11,7 +11,7 @@
         const EMPRESA = "*********** PETSHOP DA RD ***********" //
         console.log(EMPRESA)
 
-        var cachorro = {
+        let cachorro = {
             nome: "Menino",
             idade: 8,
             raca: "Vira-lata",
@@ -37,7 +37,7 @@
             },
             vacinado: false,
         }]
-        function vacinar(cachorro) {
+        const vacinar = (cachorro) => {
             if (cachorro.vacinado) {
                 console.log("Ja esta vacinado")
             } else {
@@ -46,7 +46,7 @@
             }
         }
 
-        function adicionarPet(nome, idade, raca, tipo, peso, cor, vacinado, servicos) {
+        const adicionarPet = (nome, idade, raca, tipo, peso, cor, vacinado, servicos) => {
 
             let petNovo = {
                 nome: nome,
@@ -67,19 +67,21 @@
             pets.push(petNovo);
 
             console.log("Pet adicionar com sucesso");
-            
+
         }
 
         // function mostrarPets(){
-        const mostrarPets = function(){
-            pets.forEach(function(pet,index){
-            // for(let i = 0; i < pets.length; i++){
+        const mostrarPets = () => {
+            pets.forEach(function (pet, index) {
+                // for(let i = 0; i < pets.length; i++){
                 console.log("---------------------------------");
                 console.log("Nome do pet:" + pet.nome);
                 console.log("Tipo do pet:" + pet.tipo);
-                console.log(pet.vacinado?"Esse pet já e vacinado":"Esse pet não foi vacinado!");
-            
-        });
+
+                // if ternario!!!
+                console.log(pet.vacinado ? "Esse pet já e vacinado" : "Esse pet não foi vacinado!");
+
+            });
 
         }
     </script>
